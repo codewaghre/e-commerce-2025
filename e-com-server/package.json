@@ -9,7 +9,7 @@
     "build": "tsc ./src/app.ts",
     "watch": "tsc -w",
     "dev": "npx tsx watch ./src/app.ts",
-    "render-build": "npm install && npm run build"
+     "render-build": "cd /opt/render/project && npm install && npm run build"
   },
   "keywords": [
     "backend",
