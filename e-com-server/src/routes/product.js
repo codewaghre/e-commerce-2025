@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var express_1 = require("express");
+var onlyAdmin_js_1 = require("../middlewares/onlyAdmin.js");
+var product_js_1 = require("../controllers/product.js");
+var multer_js_1 = require("../middlewares/multer.js");
+var app = express_1.default.Router();
+app.post("/new", onlyAdmin_js_1.onlyAdmin, multer_js_1.mutliUpload, product_js_1.newProduct);
+app.get("/latest", product_js_1.getLatestProduct);
+app.get("/categories", product_js_1.getAllCategories);
+app.get("/admin-product", onlyAdmin_js_1.onlyAdmin, product_js_1.getAdminProduct);
+app.get("/all", product_js_1.getAllProducts);
+app.get("/:id", product_js_1.getSingleProduct);
+app.put("/:id", onlyAdmin_js_1.onlyAdmin, multer_js_1.mutliUpload, product_js_1.updateProduct);
+app.delete("/:id", onlyAdmin_js_1.onlyAdmin, product_js_1.deleteProduct);
+exports.default = app;

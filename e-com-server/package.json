@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node dist/app.js",
-    "build": "tsc",
+    "build": "tsc ./src/app.ts",
     "watch": "tsc -w",
     "dev": "npx tsx watch ./src/app.ts",
     "render-build": "npm install && npm run build"

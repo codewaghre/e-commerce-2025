@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var express_1 = require("express");
+var user_js_1 = require("../controllers/user.js");
+var onlyAdmin_js_1 = require("../middlewares/onlyAdmin.js");
+var app = express_1.default.Router();
+app.post("/new", user_js_1.newUser);
+app.get("/all", onlyAdmin_js_1.onlyAdmin, user_js_1.getAllUsers);
+app.get("/:id", user_js_1.getUser);
+app.delete("/:id", onlyAdmin_js_1.onlyAdmin, user_js_1.deleteUser);
+exports.default = app;

@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var express_1 = require("express");
+var onlyAdmin_js_1 = require("../middlewares/onlyAdmin.js");
+var order_js_1 = require("../controllers/order.js");
+var app = express_1.default.Router();
+app.post("/new", order_js_1.newOrder);
+app.get("/my", order_js_1.myOrders);
+app.get("/allorder", onlyAdmin_js_1.onlyAdmin, order_js_1.allOrders);
+app.get("/:id", order_js_1.getSingleOrderDetails);
+app.put("/:id", onlyAdmin_js_1.onlyAdmin, order_js_1.processOrders);
+app.delete("/:id", onlyAdmin_js_1.onlyAdmin, order_js_1.deleteOrder);
+exports.default = app;
