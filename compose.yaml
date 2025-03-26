@@ -1,0 +1,24 @@
+version: "3.8"
+name: e-commerce
+services:
+  server:
+   build:
+     context: ./e-com-server
+     dockerfile: Dockerfile
+   container_name: e-com-server
+   env_file:
+     - ./.env
+   ports:
+      - "2020:4000"
+
+  client:
+   build:
+    context: ./e-com-client
+    dockerfile: Dockerfile
+   container_name: e-com-client
+   env_file:
+    - ./.env
+   ports:
+     - 2021:5173
+   depends_on:
+      - server
