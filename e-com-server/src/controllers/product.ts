@@ -129,9 +129,7 @@ export const getAdminProduct = TryCatch(async ( req, res, next) => {
 
         await redis.setex("all-products", redisTTL, JSON.stringify(product));
     }
-       
 
-   
     return res.status(201).json({
         success: true,
         message: "All Product Data" ,
