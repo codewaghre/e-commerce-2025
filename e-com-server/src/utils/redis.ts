@@ -1,10 +1,12 @@
 import { Redis } from "ioredis"
 
-export const connectRedis = (redisURI: string) => {
+
+
+export const connectRedis = (redisURI: string, redisHost : string, redisPort: string) => {
   const redis = new Redis({
     password: redisURI,
-    host: 'redis-10171.c264.ap-south-1-1.ec2.redns.redis-cloud.com',
-    port: 10171
+    host: redisHost,
+    port: Number(redisPort)
   })
 
   redis.on("connect", () => console.log("Redis Connected"));

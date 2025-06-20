@@ -28,6 +28,8 @@ const port = process.env.PORT
 const stripeKey = process.env.STRIPE_KEY || "";
 export const stripe = new Stripe(stripeKey)
 const redisURI = process.env.REDIS_URI_PASSWORD || "";
+const redisHost = process.env.REDIS_HOST || "";
+const redisPort = process.env.REDIS_PORT || "";
 export const redisTTL = process.env.REDIS_TTL || 60 * 60 * 4;
 
 
@@ -38,7 +40,7 @@ connectDB().then(() => {
    console.log(error.message);
 }) 
 
-export const redis = connectRedis(redisURI)
+export const redis = connectRedis(redisURI, redisHost, redisPort)
 
 
 cloudinary.config({
