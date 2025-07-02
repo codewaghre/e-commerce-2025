@@ -29,6 +29,7 @@
 **Frontend:**
 - React
 - HTML, CSS, JavaScript
+- TypeScript 
 - Vite
 - Framer Motion
 
