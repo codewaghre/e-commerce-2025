@@ -53,8 +53,7 @@ A modern, full-stack E-Commerce platform built with performance and scalability 
 ```bash
 git clone https://github.com/codewaghre/e-commerce-2025.git
 cd e-commerce-2025
-
-
+```
 <!-- CONTACT -->
 ## Contact
 
