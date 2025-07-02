@@ -1,8 +1,8 @@
 # 🛒 E-Commerce 2025
 
-A modern, full-stack E-Commerce platform built with performance and scalability in mind. This project features a responsive UI, dynamic admin dashboard, real-time data visualization, API caching, and powerful filtering and search functionalities. It is optimized for smooth user experience and admin control over transactions, users, and analytics.
+**E-Commerce 2025** is a full-stack shopping platform built for performance, scalability, and admin-driven analytics. Featuring a modern user interface, intelligent API caching, smooth animations, and a robust dashboard, this project brings real-world features into a developer-friendly stack with fast deployment capabilities.
 
-**🔗 Live Demo:** [e-commerce-2025-lilac.vercel.app](https://e-commerce-2025-lilac.vercel.app/)
+🔗 **Live Demo:** [e-commerce-2025-lilac.vercel.app](https://e-commerce-2025-lilac.vercel.app)  
 
 ![e-com](https://github.com/user-attachments/assets/f9238e40-2391-4c60-a135-8fa8af26ce81)
 
@@ -46,7 +46,7 @@ A modern, full-stack E-Commerce platform built with performance and scalability 
 
 ---
 
-## 📦 Project Setup
+## 📦 Installation & Setup
 
 ### 1. Clone the repository
 
@@ -54,9 +54,71 @@ A modern, full-stack E-Commerce platform built with performance and scalability 
 git clone https://github.com/codewaghre/e-commerce-2025.git
 cd e-commerce-2025
 ```
-<!-- CONTACT -->
-## Contact
 
+---
+
+### 2. Install dependencies
+
+#### Frontend
+
+```bash
+cd client
+npm install
+```
+
+#### Backend
+
+```bash
+cd server
+npm install
+```
+
+---
+
+### 3. Set up environment variables
+
+Create `.env` files in both `client/` and `server/` directories.
+
+> 🔐 Environment variables have been **intentionally excluded** here for security. Please refer to your local config or `.env.example` template.
+
+---
+
+### 4. Run the app locally
+
+#### Frontend (Vite)
+
+```bash
+cd client
+npm run dev
+```
+
+#### Backend (Node.js)
+
+```bash
+cd server
+node index.js
+```
+
+Ensure MongoDB and Redis are running in your local or remote environment.
+
+---
+
+
+
+## 📎 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 📬 Contact
+
+**Abhishek Ashok Waghre**  
+📧 [waghreabhishek@gmail.com](mailto:waghreabhishek@gmail.com)  
+🔗 [LinkedIn](https://www.linkedin.com/in/waghre-abhishek)  
+💻 [GitHub](https://github.com/codewaghre)
+
+---
 Abhishek Ashok Waghre - [@Linkdin](https://www.linkedin.com/in/waghre-abhishek-b9381522a/) - waghreabhishek@example.com
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
